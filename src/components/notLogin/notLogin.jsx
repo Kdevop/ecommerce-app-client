@@ -9,21 +9,20 @@ function NotLogin() {
 
     useEffect(() => {
         const countdownTimer = setInterval(() => {
-            setCountdown(prevCountdown => prevCountdown - 1);
-            if (countdown === 0) {
-                clearInterval(countdownTimer);
-            }
+            setCountdown(prevCountdown => {
+                if (prevCountdown === 1) {
+                    clearInterval(countdownTimer);
+                    navigate('/');
+                    return 0;
+                }
+                return prevCountdown - 1;
+            });
         }, 1000);
-
-        const redirectTimer = setTimeout(() => {
-            navigate('/');
-        }, 5000);
-
+    
         return () => {
-            clearTimeout(countdownTimer);
-            clearTimeout(redirectTimer);
+            clearInterval(countdownTimer);
         };
-    }, [navigate, countdown]);
+    }, [navigate]);
 
 
     return (

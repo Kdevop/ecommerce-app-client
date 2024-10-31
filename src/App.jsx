@@ -22,7 +22,7 @@ const appRouter=createBrowserRouter(createRoutesFromElements(
     <Route index element={<Home />} />
     <Route path='/products/:id' element={<ProductDetails />} />
     <Route path='/logout' element={<Logout />} /> 
-    {/* should the logout be a protected route? maybe. will have a think. */}
+   
 
     {/* Private Routes */}
     <Route exact path='/account' element={<Account />} />
