@@ -48,7 +48,7 @@ function Cancel() {
                 clearTimeout(redirectTimer);
             };
         }
-    }, [update, navigate]);
+    }, [update, navigate, countdown]);
 
     return (
         <div>

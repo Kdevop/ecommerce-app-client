@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { Paper } from '@mui/material';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 // styles, images and logos imports
 import styles from '../header/header.module.css';
@@ -13,7 +13,6 @@ import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined
 
 // compoenent imports
 import Cart from '../../pages/privateRoutes/cart';
-import { userAuthDone } from '../../reduxStore/authSlice';
 import { getProducts } from '../../reduxStore/productSlice';
 import Category from '../category/category';
 import AccountMenu from '../accountMenu/accountMenu';

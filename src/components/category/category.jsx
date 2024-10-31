@@ -4,7 +4,6 @@ import { getProducts, getProductByCategory } from '../../reduxStore/productSlice
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
-
 function Category() {
     const dispatch = useDispatch();
     const navigate = useNavigate();

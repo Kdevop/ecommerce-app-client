@@ -6,14 +6,14 @@ import Styles from '../privateRoutes/userDetails.module.css'
 import ReplyIcon from '@mui/icons-material/Reply';
 import { authData, userAuthDone, userAuthLoading } from '../../reduxStore/authSlice';
 import { useSelector, useDispatch } from 'react-redux';
-import { userDetails, userReturned, userDataReturned, userData, addressReturned, addressData, userError, fetchingUser } from '../../reduxStore/userSlice';
+import { userDetails, userDataReturned, userData, addressReturned, addressData, userError, fetchingUser } from '../../reduxStore/userSlice';
 import Loading from '../../components/loading/loading';
 import NotLogin from '../../components/notLogin/notLogin';
 
 function UserDetails() {
     const [isLoading, setIsLoading] = useState(true);
     const [isLoggedIn, setIsLoggedIn] = useState(false);
-    const userAuthData = useSelector(authData); // from authSlice this is the data from the login - so the user from the seesion
+    //const userAuthData = useSelector(authData); from authSlice this is the data from the login - so the user from the seesion
     const isAuthenticated = useSelector(userAuthDone); //from authSlice this confirms that if the user is loged in.
     const dataForAccount = useSelector(userData); //this if from userSlice and is the data for the user - address and details.
     const dataCheckAccount = useSelector(userDataReturned); // from userSlice this is the confirmation is we have the user data back name email

@@ -17,8 +17,6 @@ const validationSchema = Yup.object().shape({
 });
 
 function Address(props) {
-    const [isLoading, setIsLoading] = useState(true);
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
     const dispatch = useDispatch();
     const [isShowEdit, setIsShowEdit] = useState(false);
     const editRef = useRef(false);

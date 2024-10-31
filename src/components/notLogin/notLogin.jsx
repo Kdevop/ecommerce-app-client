@@ -23,7 +23,7 @@ function NotLogin() {
             clearTimeout(countdownTimer);
             clearTimeout(redirectTimer);
         };
-    }, [navigate]);
+    }, [navigate, countdown]);
 
 
     return (

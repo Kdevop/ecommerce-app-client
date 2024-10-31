@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import Styles from '../privateRoutes/orders.module.css';
 import { Paper } from '@mui/material';
 import { useSelector, useDispatch } from 'react-redux';
-import { useLocation, useNavigate } from 'react-router-dom';
 import { getOrders, orderData, prevOrders, loadingOrders } from '../../reduxStore/ordersSlice.js';
 import { authData, userAuthDone, userAuthLoading } from '../../reduxStore/authSlice';
 import OrderCard from '../../components/ordersCard/orderCard.jsx';

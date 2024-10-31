@@ -6,8 +6,6 @@ import { useDispatch } from 'react-redux';
 import { getCart } from '../../reduxStore/cartSlice';
 import { Paper } from '@mui/material';
 
-
-
 function Success() {
     const location = useLocation();
     const dispatch = useDispatch();
@@ -53,7 +51,7 @@ function Success() {
                 clearTimeout(redirectTimer);
             };
         }
-    }, [update, navigate, getCart])
+    }, [update, navigate, getCart, countdown, dispatch])
 
     return (
         <div>

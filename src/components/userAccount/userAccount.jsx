@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
 import Styles from './userAccount.module.css';
-import { Paper, Grid, Avatar, Button, TextField, Typography, InputAdornment, IconButton, CircularProgress } from '@mui/material';
 import EditDetails from "../editPersonalDetails/editDetails";
 
 function UserAccount(props) {

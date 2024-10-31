@@ -29,7 +29,7 @@ function OrderDetails() {
             }
         }
 
-    }, [navigate, isAuthenticated, dispatch]);
+    }, [navigate, isAuthenticated, dispatch, loadingUser]);
 
     useEffect(() => {
         if (location.pathname === `/orders/${orderId}`) {

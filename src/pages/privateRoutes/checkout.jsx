@@ -27,9 +27,9 @@ function Checkout() {
         }
     }, [dispatch, location.pathname, isAuthenticated]);
 
-    const shippingAddress = () => {
-        setOpen(!open);
-    }
+    // const shippingAddress = () => {
+    //     setOpen(!open);
+    // } will need to update this later.
 
     const onSubmit = async () => {
         console.log('You hit the checkout button!');
@@ -59,9 +59,9 @@ function Checkout() {
         }
 }
 
-    const openShipping = {
-        display: open ? 'block' : 'none',
-    }
+    // const openShipping = {
+    //     display: open ? 'block' : 'none',
+    // } will be used later for amending shipping address.
 
     return (
         <div className={Styles.checkout}>

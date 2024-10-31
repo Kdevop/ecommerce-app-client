@@ -76,7 +76,7 @@ const ordersSlice = createSlice({
                 state.initGetOrders = false; 
                 state.ordersReturned = true;
                 state.data.singleOrder.checkout = action.payload.checkout_data;
-                state. data.singleOrder.products = action.payload.products_data;
+                state.data.singleOrder.products = action.payload.products_data;
             })
             .addCase(orderDetails.rejected, (state) => {
                 state.initGetOrders = false;

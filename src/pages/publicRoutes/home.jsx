@@ -1,7 +1,7 @@
-import React, {useState, useEffect} from 'react';
+import React, { useEffect} from 'react';
 import ProductCard from '../../components/cards/productCards';
 import Styles from '../publicRoutes/home.module.css';
-import { getProducts, productError, loadingProducts, productsReturned } from '../../reduxStore/productSlice';
+import { getProducts, productsReturned } from '../../reduxStore/productSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 import {CircularProgress } from '@mui/material';
@@ -16,7 +16,7 @@ function Home() {
         if (products.length === 0 && location.pathname === '/') {
             dispatch(getProducts());
         }
-    }, [dispatch, location.pathname]);
+    }, [dispatch, location.pathname, location.length]);
 
     if (products.length === 0) {
         return (
@@ -29,7 +29,7 @@ function Home() {
     return (
         <div>
             <div className={Styles.img_container}>
-                <img src={`/photos/sale_image2.jpg`} className={Styles.img}/>
+                <img src={`/photos/sale_image2.jpg`} className={Styles.img} alt={"Photo of promotion."}/>
             </div>
             <div className={Styles.home}>
                 <div className={Styles.productcontainer}>

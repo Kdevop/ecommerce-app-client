@@ -1,6 +1,5 @@
 import React from 'react';
 import Styles from '../cards/productCards.module.css';
-import { NavLink } from 'react-router-dom';
 import { Paper } from '@mui/material';
 
 

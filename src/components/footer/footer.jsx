@@ -1,6 +1,5 @@
 import React from 'react';
 import Styles from '../footer/footer.module.css';
-import { Paper } from '@mui/material';
 
 function Footer() {
     return (

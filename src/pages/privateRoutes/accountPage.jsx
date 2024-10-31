@@ -3,7 +3,6 @@ import { Paper } from '@mui/material';
 import { userAuthDone, userAuthLoading } from '../../reduxStore/authSlice';
 import { useSelector, useDispatch } from 'react-redux';
 import Styles from '../privateRoutes/accountPage.module.css';
-import { useNavigate } from 'react-router-dom';
 import { userData, userDetails, fetchingUser } from '../../reduxStore/userSlice';
 import Loading from '../../components/loading/loading';
 import NotLogin from '../../components/notLogin/notLogin';
@@ -13,7 +12,6 @@ function Account() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const loadingUser = useSelector(userAuthLoading);
     const isAuthenticated = useSelector(userAuthDone);
-    const navigate = useNavigate();
     const user = useSelector(userData);
     const loading = useSelector(fetchingUser);
     const dispatch = useDispatch();
