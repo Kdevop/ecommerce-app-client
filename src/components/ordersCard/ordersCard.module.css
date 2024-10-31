@@ -1,0 +1,39 @@
+/* .container {
+    margin: 20px;
+} */
+
+.button {
+    border: 1px, solid, black;
+    border-radius: 10px;
+    line-height: 50px;
+    padding: 50px 80px 80px 50px;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    font-size: 30px;
+    color: black;
+}
+
+.button:hover {
+    background-color: #1BBD7E;
+}
+
+@media only screen and (max-width: 1000px) {
+    .button {
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .button {
+        padding: 40px 70px 70px 40px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .button {
+        font-size: 20px;
+        
+    }
+}

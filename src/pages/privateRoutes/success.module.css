@@ -1,0 +1,11 @@
+.container {
+    width: 100%;
+    text-align: center;
+    height: 500px;
+    margin: 17.5px;
+    margin-left: 0;
+}
+
+.contentContainer {
+    padding-top: 17.5px;
+}
