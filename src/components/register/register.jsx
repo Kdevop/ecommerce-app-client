@@ -64,7 +64,6 @@ function Registration(props) {
                 await new Promise(resolve => setTimeout(resolve, 2500));
 
                 onLogin();
-                onReg();
             }
 
             if (registerError) {
@@ -73,12 +72,12 @@ function Registration(props) {
             }
         };
 
+
         fetchingData();
     }, [registerComplete, registerError, onLogin, onReg])
 
     const onSwitch = () => {
         onLogin();
-        onReg();
     };
 
     return (

@@ -22,7 +22,6 @@ import Registration from '../register/register';
 function Header() {
     const location = useLocation();
     const dispatch = useDispatch();
-
     const [isOpenCat, setIsOpenCat] = useState(false);
     const [isOpenAcc, setIsOpenAcc] = useState(false);
     const [isOpenCart, setIsOpenCart] = useState(false);
@@ -118,12 +117,18 @@ function Header() {
     };
 
     const onLogin = () => {
-        setShowLogin(prevState => !prevState);
-    }
-
-    const onReg = () => {
-        setShowReg(!showReg);
+        setShowLogin(true);
+        setShowReg(false);
     };
+    
+    const onReg = () => {
+        setShowReg(true);
+        setShowLogin(false);
+    };
+
+    const closeLogin = () => {
+        setShowLogin(false);
+    }; 
 
     useEffect(() => {
         const handleClickOutside = (event) => {
@@ -171,8 +176,6 @@ function Header() {
             }
         };
 
-        console.log('Login Handle Click Outside useEffect triggered');
-
         document.addEventListener('mousedown', loginHandleClickOutside);
 
         return () => {
@@ -198,8 +201,6 @@ function Header() {
             }
         };
 
-        console.log('Login Handle Click Outside useEffect triggered');
-
         document.addEventListener('mousedown', regHandleClickOutside);
 
         return () => {
@@ -210,7 +211,7 @@ function Header() {
     return (
         <div>
             <div style={openLogin} ref={loginRef}>
-                <Login onLogin={onLogin} onReg={onReg} showLogin={showLogin} className={styles.login} />
+                <Login onLogin={onLogin} onReg={onReg} closeLogin={closeLogin} showLogin={showLogin} className={styles.login} />
             </div>
             <div style={openRegister} ref={regRef}>
                 <Registration onLogin={onLogin} onReg={onReg} className={styles.reg} />

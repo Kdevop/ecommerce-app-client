@@ -1,4 +1,6 @@
 const API_ROOT = 'https://ecommerce-app-server-yn37.onrender.com/api';
+//const API_ROOT = 'http://localhost:8000/api';
+
 
 export const register = async (credentials) => {
     const { password, email, first_name, last_name } = credentials;

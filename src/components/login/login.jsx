@@ -16,7 +16,7 @@ const validationSchema = Yup.object().shape({
 });
 
 function Login(props) {
-    const { onLogin, onReg, showLogin } = props;
+    const { onLogin, onReg, showLogin, closeLogin } = props;
     const [showPassword, setShowPassword] = useState(false);
     const [signedIn, setSignedIn] = useState(false);
     const [error, setError] = useState(false);
@@ -61,22 +61,24 @@ function Login(props) {
                 dispatch(getCart());
                 
                 await new Promise(resolve => setTimeout(resolve, 2500));
-                if(showLogin) {
-                    onLogin();
-                }
+                    closeLogin();
             }
     
             if (signInError) {
                 setSignedIn(false);
                 setError(true);
             }
+
+            if (!signInComplete) {
+                setSignedIn(false);
+                setError(false);
+            }
         };
     
         fetchData();
-    }, [signInComplete, signInError, dispatch, onLogin, showLogin]);
+    }, [signInComplete, signInError, dispatch ]);
 
     const onSwitch = () => {
-        onLogin();
         onReg();
     };
 

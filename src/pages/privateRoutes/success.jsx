@@ -30,7 +30,7 @@ function Success() {
 
             updateCheckout(session_id);
         }
-    }, [location.pathname, session_id, dispatch, getCart, setCountdown]);
+    }, [location.pathname, session_id, dispatch ]);
 
     useEffect(() => {
         if (update) {
@@ -51,7 +51,7 @@ function Success() {
                 clearTimeout(redirectTimer);
             };
         }
-    }, [update, navigate, getCart, countdown, dispatch])
+    }, [update, navigate, dispatch])
 
     return (
         <div>

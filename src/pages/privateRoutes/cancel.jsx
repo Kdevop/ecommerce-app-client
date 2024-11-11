@@ -28,7 +28,7 @@ function Cancel() {
             };
             updateCheckout(session_id);
         };
-    }, [location.pathname, session_id]);
+    }, [location.pathname ]);
 
     useEffect(() => {
         if (update) {
@@ -48,7 +48,7 @@ function Cancel() {
                 clearTimeout(redirectTimer);
             };
         }
-    }, [update, navigate, countdown]);
+    }, [update, navigate ]);
 
     return (
         <div>
